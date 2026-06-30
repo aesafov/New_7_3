@@ -168,7 +168,7 @@ void main()
  
 
    initialization_app_before_load_xilinx();
-   //***   initialization_app_load_xilinx();
+   initialization_app_load_xilinx();
    //***   initialization_app_after_load_xilinx();
 
    //***   initialization_app_before_init_all_interrupts();

@@ -14,6 +14,7 @@ void initialization_app_before_main_while();
 void initialization_app_interrupts();
 void run_app_main_while();
 void run_rs_bios_main_while();
+void init_vars_alg();
 
 #ifdef __cplusplus
   }

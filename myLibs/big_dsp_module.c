@@ -363,15 +363,15 @@ void setup_adr_pcb_controller()
     EALLOW;
 
 	GpioMuxRegs.GPBMUX.bit.TDIRB_GPIOB11=0;
-	GpioMuxRegs.GPBDIR.bit.GPIOB11=1; // pin 71 -> 3.3v | GND from jumper
+	GpioMuxRegs.GPBDIR.bit.GPIOB11=1; // pin 71 -> 3.3v | GND from jumper between TMS and Xilinx
 
     EDIS;
 }
 
 
-//int get_adr_pcb_controller()
-//{
-//  return !GpioDataRegs.GPBDAT.bit.GPIOB11;
-//}
+int get_adr_pcb_controller()
+{
+  return !GpioDataRegs.GPBDAT.bit.GPIOB11; // pin 71 -> 3.3v | GND from jumper between TMS and Xilinx
+}
 
 
