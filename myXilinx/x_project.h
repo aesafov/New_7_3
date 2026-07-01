@@ -1,17 +1,27 @@
 #ifndef X_PROJECT_H_
 #define X_PROJECT_H_
 
+#include "xp_controller.h"
+
+#ifdef __cplusplus
+  extern "C" {
+#endif
+
+//-----------------------------------------------------------------------------
+// Define the types
+//-----------------------------------------------------------------------------
+
 typedef struct TS_project{
     T_controller        controller;
-    T_adc               adc[C_adc_number];
-    T_cds_tk            cds_tk[C_cds_tk_number];
-    T_cds_in            cds_in[C_cds_in_number];
-    T_cds_out           cds_out[C_cds_out_number];
-    T_hwp_soft          hwp[C_hwp_number];
-    T_omega             omega[C_omega_number];
-    T_dispatcher        dispatcher;
-
-    T_project_soft_info soft_info;
+//    T_adc               adc[C_adc_number];
+//    T_cds_tk            cds_tk[C_cds_tk_number];
+//    T_cds_in            cds_in[C_cds_in_number];
+//    T_cds_out           cds_out[C_cds_out_number];
+//    T_hwp_soft          hwp[C_hwp_number];
+//    T_omega             omega[C_omega_number];
+//    T_dispatcher        dispatcher;
+//
+//    T_project_soft_info soft_info;
 
 } T_project;
 
@@ -69,5 +79,9 @@ typedef struct TS_project_useit {
 // Prototypes for the functions
 //------------------------------------------------------------------------------
 void project_clear();
+
+#ifdef __cplusplus
+  }
+#endif
 
 #endif // end X_PROJECT_H_

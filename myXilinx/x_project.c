@@ -1,4 +1,8 @@
 #include "x_basic_types.h"
+#include "x_project.h"
+
+#pragma DATA_SECTION(project,".logs");
+T_project project;
 
 void project_clear()
 {
