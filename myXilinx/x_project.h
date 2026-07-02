@@ -2,6 +2,9 @@
 #define X_PROJECT_H_
 
 #include "xp_controller.h"
+#include "xp_adc.h"
+#include "x_parameters.h"
+#include "xp_cds_tk.h"
 
 #ifdef __cplusplus
   extern "C" {
@@ -13,8 +16,8 @@
 
 typedef struct TS_project{
     T_controller        controller;
-//    T_adc               adc[C_adc_number];
-//    T_cds_tk            cds_tk[C_cds_tk_number];
+    T_adc               adc[C_adc_number];
+    T_cds_tk            cds_tk[C_cds_tk_number];
 //    T_cds_in            cds_in[C_cds_in_number];
 //    T_cds_out           cds_out[C_cds_out_number];
 //    T_hwp_soft          hwp[C_hwp_number];

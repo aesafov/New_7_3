@@ -11,6 +11,8 @@
 #include "x_clock.h"
 #include "x_intc.h"
 #include "x_input_new.h"
+#include "x_key.h"
+#include "x_speed_sensor.h"
 
 #ifdef __cplusplus
   extern "C" {
@@ -221,6 +223,13 @@ typedef union {
     } bit;
 } TU_controller_fpga_hwp_plane_select_lines;
 
+typedef struct {
+    UInt16 store_access_count;
+    UInt16 store_control_reg0;
+    UInt16 store_mask_for_error_external;
+    UInt16 store_parallel_bus_enable;
+} T_controller_fpga_info;
+
 typedef struct TS_controller_fpga
 {
     T_controller_fpga_config                    config;
@@ -243,11 +252,11 @@ typedef struct TS_controller_fpga
 //  Xinput_new_uni                              input_new_uni_0;
     Xinput_new_uni                              input_new_uni_1;
     XSpeed_Sensor*                              pspeed_sensor; // use pointer for allocate object in section fast_vars
-//    XKey_all                                    key_all;
+    XKey_all                                    key_all;
 
     UInt16                                      was_reset;
-//    T_component_status                          status;
-//    T_controller_fpga_info                      info;
+    T_component_status                          status;
+    T_controller_fpga_info                      info;
 
 } T_controller_fpga;
 

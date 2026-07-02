@@ -37,6 +37,12 @@ typedef float real;
 #endif
 
 typedef enum {
+    component_NotReady  = 0,
+    component_Ready     = 0x1111,
+    component_Started   = 0x2222
+} T_component_status;
+
+typedef enum {
    status_Success = 0,
    status_Failed  = 1
 } T_status_ReturnType;
